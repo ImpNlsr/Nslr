@@ -35,10 +35,7 @@ client.on('message', message => {
 	}
 });
 
-client
-	.login(BOT_TOKEN)
-	.then(_ => console.log('hmm'))
-	.catch(console.error);
+client.login(BOT_TOKEN).catch(console.error);
 
 function fetchServerData(ip, port) {
 	return new Promise((resolve, reject) => {
