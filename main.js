@@ -8,7 +8,7 @@ const client = new Discord.Client();
 
 
 
-const BOT_TOKEN = 'NjU1NDgxMjY5MjAyOTc2Nzc5.XfUx3A.4aJmGmgfqDNm7gZjexOOz7xtrjc';
+const BOT_TOKEN = 'NjU1NDI2MDc4NjM4MjExMTA0.XfUy2A.PZxxtZfQoQEQqSuIpTIfTGxTk_o';
 
 const mcCommand = '!statut'; // Command for triggering
 
