@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const client = new Discord.Client();
 
-const BOT_TOKEN = 'NjU1NDI1NzYxNDczMzMxMjIw.XfUsdw.L6-3SmbuiQPAI75qNOxERT90jUY';
+const BOT_TOKEN = 'NjU1NDgxMjY5MjAyOTc2Nzc5.XfUuog.b5qlodtAbp1-ydS_CF6A5rSx824';
 const mcCommand = '!statut'; // Command for triggering
 const mcIP = 'mc.dieperink-hosting.ch'; // MC server IP or hostname address
 const mcPort = 25566; // MC server port (default=25565)
