@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const client = new Discord.Client();
 
-const BOT_TOKEN = 'NjU1NDI1NzYxNDczMzMxMjIw.XfT7Gg.11gFZlAXEizygzgFXASA2s1Vl8g';
+const BOT_TOKEN = 'NjU1NDI1NzYxNDczMzMxMjIw.XfUeQQ.C3G4uM07QWVzvUTxkGQL8Tc1_p8';
 const mcCommand = '!statut'; // Command for triggering
 const mcIP = 'mc.dieperink-hosting.ch'; // MC server IP or hostname address
 const mcPort = 25566; // MC server port (default=25565)
@@ -19,21 +19,23 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === mcCommand) {
-		fetchServerData(mcIP, mcPort).then(data => {
-			const status = getStatusMessage(
-				data,
-				'Minecraft server is currently offline',
-				'Minecraft server is online  -  ',
-				' player(s) connected!',
-				'Nobody is playing!'
-			);
-			console.log(status);
-			message.reply(status);
-		});
+		fetchServerData(mcIP, mcPort)
+			.then(data => {
+				const status = getStatusMessage(
+					data,
+					'Minecraft server is currently offline',
+					'Minecraft server is online  -  ',
+					' player(s) connected!',
+					'Nobody is playing!'
+				);
+				console.log(status);
+				message.reply(status);
+			})
+			.catch(console.error);
 	}
 });
 
-client.login(BOT_TOKEN);
+client.login(BOT_TOKEN).catch(console.error);
 
 function fetchServerData(ip, port) {
 	return new Promise((resolve, reject) => {
